@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="formulaire">
+            <h1>Création de profil</h1>
+            
+            <div class="form-group">
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" placeholder="Votre pseudo">
+                <p id="pseudo-error" class="error-message"></p>
+            </div>
+            
+            <div class="form-group">
+                <label>Description :</label>
+                <p id="description">Chargement...</p>
+                <button id="changer-description">Changer de description</button>
+            </div>
+            
+            <div class="form-group">
+                <label>Choisissez un avatar :</label>
+                <div class="avatars">
+                    <img src="avatar1.png" alt="Avatar 1" class="avatar" data-id="1">
+                    <img src="avatar2.png" alt="Avatar 2" class="avatar" data-id="2">
+                    <img src="avatar3.png" alt="Avatar 3" class="avatar" data-id="3">
+                </div>
+            </div>
+            
+            <button id="suivant" disabled>Suivant</button>
+        </div>
+        
+        <div id="profil" class="hidden">
+            <h2>Votre profil</h2>
+            <div class="card">
+                <img id="profil-avatar" src="" alt="Avatar">
+                <h3 id="profil-pseudo"></h3>
+                <p id="profil-description"></p>
+            </div>
+            <button id="recommencer">Recommencer</button>
+        </div>
+        
+        <div class="theme-switch">
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
